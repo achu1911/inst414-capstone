@@ -23,5 +23,13 @@ This project aims to predict customer churn using the IBM Telco Customer Churn d
 - Identify the most influential factors driving churn  
 - Provide actionable business recommendations  
 
+## Sprint 2 Progress
+
+- Acquired and cleaned the IBM Telco Customer Churn dataset (7,032 rows x 21 columns after cleaning)
+- Handled missing values and standardized categorical variables
+- Conducted exploratory data analysis (EDA) and identified key predictors of churn
+- Refined problem statement to focus on short-tenure, month-to-month contract customers
+- Prepared plan for predictive modeling, starting with logistic regression
+
 ## Repository
 [GitHub Repository](https://github.com/achu1911/inst414-capstone)
