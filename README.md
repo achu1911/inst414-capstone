@@ -31,5 +31,20 @@ This project aims to predict customer churn using the IBM Telco Customer Churn d
 - Refined problem statement to focus on short-tenure, month-to-month contract customers
 - Prepared plan for predictive modeling, starting with logistic regression
 
+## Sprint 3 Progress
+
+- Implemented a full preprocessing pipeline with stratified train/validation/test split (70/15/15), one-hot encoding, and StandardScaler applied only to training data
+- Established a Naive Majority Class baseline (73.4% accuracy, 0% recall) to benchmark model performance
+- Trained three supervised learning models:
+Logistic Regression (high interpretability, best recall),
+Random Forest (captures nonlinear patterns, moderate recall),
+Gradient Boosting (highest accuracy/AUC) 
+- Evaluated models using accuracy, precision, recall, AUC, and training time; created comparison tables and confusion matrices
+- Key findings:
+    - Logistic Regression detected the most churners (recall = 0.811)
+    - Gradient Boosting achieved the strongest overall accuracy (0.802)
+    - Contract type, tenure, and billing variables emerged as the most important predictors
+- Identified issues such as class imbalance, Random Forest overfitting, and difficulty predicting “silent churners,” informing the refinement plan for Sprint 4
+
 ## Repository
 [GitHub Repository](https://github.com/achu1911/inst414-capstone)

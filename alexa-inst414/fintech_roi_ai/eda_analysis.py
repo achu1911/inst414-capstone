@@ -55,7 +55,7 @@ def univariate_analysis(df, numeric_cols, categorical_cols, out_dir="reports/fig
 
 
 def bivariate_analysis(df, numeric_cols, target_col, out_dir="reports/figures"):
-    """Bivariate analysis with correlation matrix and detailed scatterplots with regression lines."""
+    """Bivariate analysis with correlation matrix and detailed scatterplots with reg lines"""
     ensure_dir(out_dir)
 
     # Handle categorical target
@@ -126,7 +126,7 @@ def explore_class_imbalance(df, target_col, out_dir="reports/figures"):
 def eda_pipeline(file_path, numeric_cols, categorical_cols, target_col,
                  out_dir="reports/figures", tables_out_dir="reports/tables",
                  processed_out_path="data/processed/telco_cleaned.csv"):
-    """Full EDA pipeline: load data, clean, univariate, bivariate, and class analysis."""
+    """Full EDA pipeline"""
     ensure_dir(out_dir)
     ensure_dir(tables_out_dir)
 
@@ -135,7 +135,7 @@ def eda_pipeline(file_path, numeric_cols, categorical_cols, target_col,
     df = convert_numeric(df, numeric_cols)
     df.drop_duplicates(inplace=True)
 
-    # Save cleaned dataset
+    # Saving the cleaned dataset
     df.to_csv(processed_out_path, index=False)
 
     # Univariate Analysis
@@ -147,7 +147,7 @@ def eda_pipeline(file_path, numeric_cols, categorical_cols, target_col,
     # Class imbalance
     explore_class_imbalance(df, target_col, out_dir)
 
-    # Save summary statistics
+    # Saving summary statistics
     df.describe().to_csv(f"{tables_out_dir}/summary_stats.csv")
 
     print("\nEDA complete. Figures saved in:", out_dir)
